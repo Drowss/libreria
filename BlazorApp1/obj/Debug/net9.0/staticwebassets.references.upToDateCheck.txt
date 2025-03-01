@@ -1,1 +1,5 @@
 C:\Users\esnei\OneDrive\Desktop\blazortest\BlazorApp1\BlazorApp1.Client\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\esnei\OneDrive\Desktop\blazortest\BlazorApp1\BlazorApp1.Client\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\esnei\OneDrive\Desktop\blazortest\BlazorApp1\BlazorApp1.Client\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\esnei\OneDrive\Desktop\blazortest\BlazorApp1\BlazorApp1.Client\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\esnei\OneDrive\Desktop\blazortest\BlazorApp1\BlazorApp1.Client\obj\Debug\net9.0\staticwebassets.build.json

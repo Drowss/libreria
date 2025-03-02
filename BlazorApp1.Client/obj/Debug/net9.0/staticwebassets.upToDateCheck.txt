@@ -1,0 +1,4 @@
+C:\Users\Melany Suarez\OneDrive\Escritorio\Poli\Semestre 5\Profundización\libreria-main\BlazorApp1.Client\wwwroot\appsettings.Development.json
+C:\Users\Melany Suarez\OneDrive\Escritorio\Poli\Semestre 5\Profundización\libreria-main\BlazorApp1.Client\wwwroot\appsettings.json
+wwwroot\appsettings.Development.json
+wwwroot\appsettings.json

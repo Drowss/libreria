@@ -1,0 +1,101 @@
+﻿@page "/prestamo-libro"
+
+<h3 class="titulo">Préstamo de Libros</h3>
+<p class="descripcion">Complete el formulario para registrar el préstamo de libros.</p>
+
+<div class="contenedor">
+    <EditForm Model="prestamo" OnValidSubmit="GuardarPrestamo" class="formulario">
+        <DataAnnotationsValidator />
+        <div class="campo">
+            <label>Documento de Identidad:</label>
+            <InputText @bind-Value="prestamo.DocumentoIdentidad" class="entrada" />
+        </div>
+        <div class="campo">
+            <label>Código del Libro:</label>
+            <InputText @bind-Value="prestamo.CodigoLibro" class="entrada" />
+        </div>
+        <div class="campo">
+            <label>Fecha Inicio Préstamo:</label>
+            <InputDate @bind-Value="prestamo.FechaInicio" class="entrada" />
+        </div>
+        <div class="campo">
+            <label>Fecha Entrega:</label>
+            <InputDate @bind-Value="prestamo.FechaEntrega" class="entrada" />
+        </div>
+        <div class="campo">
+            <label>Estado:</label>
+            <InputSelect @bind-Value="prestamo.Estado" class="entrada">
+                <option value="Pendiente">Pendiente</option>
+                <option value="Devuelto">Devuelto</option>
+                <option value="Retrasado">Retrasado</option>
+            </InputSelect>
+        </div>
+        <button type="submit" class="boton">Guardar</button>
+    </EditForm>
+</div>
+
+<style>
+    body {
+        background-color: #FFFCF0;
+        color: #171F1E;
+        font-family: Arial, sans-serif;
+    }
+
+    .contenedor {
+        background: #FFFCF0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .titulo {
+        text-align: center;
+        color: #4E6161;
+    }
+
+    .campo {
+        margin-bottom: 15px;
+    }
+
+    .entrada {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .boton {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        background-color: #4E6161;
+        color: #FFFCF0;
+    }
+
+        .boton:hover {
+            background-color: #3A4A4A;
+        }
+</style>
+
+@code {
+    private PrestamoLibro prestamo = new PrestamoLibro();
+
+    private void GuardarPrestamo()
+    {
+        Console.WriteLine("Préstamo registrado:", prestamo);
+    }
+
+    private class PrestamoLibro
+    {
+        public string DocumentoIdentidad { get; set; } = string.Empty;
+        public string CodigoLibro { get; set; } = string.Empty;
+        public DateTime FechaInicio { get; set; } = DateTime.Today;
+        public DateTime FechaEntrega { get; set; } = DateTime.Today.AddDays(30);
+        public string Estado { get; set; } = "Pendiente";
+    }
+}
